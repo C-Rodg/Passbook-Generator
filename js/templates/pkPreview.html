@@ -1,0 +1,49 @@
+<div class="phone__screen" ng-style="{'background-color': pkpass.backgroundColor}">
+	<div class="front" ng-class="{ 'showCard' : showFront }" ng-style="{'color': pkpass.foregroundColor}">
+		<div class="screen__logo" ng-if="pkpass.image.logo"></div>
+		<div class="screen__logotext">{{pkpass.logoText}}</div>
+
+		<div class="text--primary preview-text">
+			<div class="text__prime-label label">{{pkpass.primaryLabel}}</div>
+			<div class="text__prime-value value">{{pkpass.primaryValue}}</div>
+		</div>
+		<div class="text--secondary preview-text">
+			<div class="text__sec-label label">{{pkpass.secondaryLabel}}</div>
+			<div class="text__sec-value value">{{pkpass.secondaryValue}}</div>
+		</div>
+
+		<div class="phone__qrcode">
+			<img src="./img/qrcode.png" alt="QR Code">
+		</div>
+		<div class="phone__flip" ng-click="switchView()">
+			<img src="./img/info.png" alt="Information">
+		</div>
+	</div>
+	<div class="back" ng-class="{ 'showCard' : !showFront }">
+		<div class="back__top">
+			<span class="update">never updated</span>
+			<span class="done" ng-click="switchView()">Done</span>
+		</div>
+		<div class="back__panel">
+			<div class="back__suggest">
+				<span class="suggest--text">Suggest on Lock Screen</span>
+				<div class="wrapper">
+				  <input type="checkbox" name="toggle" id="toggle">
+				  <label for="toggle"></label>
+				</div>
+			</div>
+			<div class="back__time">
+				Show based on time or location.
+			</div>
+			<div class="back--field1 backfield">
+				{{pkpass.backfield1}}
+			</div>
+			<div class="back--field2 backfield">
+				{{pkpass.backfield2}}
+			</div>
+			<div class="back--field3 backfield">
+				{{pkpass.backfield3}}
+			</div>
+		</div>
+	</div>
+</div>

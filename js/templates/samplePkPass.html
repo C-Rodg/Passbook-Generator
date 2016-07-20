@@ -1,0 +1,104 @@
+<div>
+  <xml version="1.0" encoding="UTF-8">
+    <pass xml-element="pass" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <passTypeIdentifier xml-element="passTypeIdentifier"></passTypeIdentifier>
+      <teamIdentifier xml-element="teamIdentifier"></teamIdentifier>
+      <style xml-element="style"></style>
+      <suppressStripShine xml-element="suppressStripShine"></suppressStripShine>
+      <transitType xml-element="transitType"></transitType>
+      <barcodeFormat xml-element="barcodeFormat"></barcodeFormat>
+      <barcodeMessageEncoding xml-element="barcodeMessageEncoding">utf-8</barcodeMessageEncoding>
+      <backgroundColor xml-element="backgroundColor">{{pkpass.backgroundColor | hex}}</backgroundColor>
+      <foregroundColor xml-element="foregroundColor">{{pkpass.foregroundColor | hex}}</foregroundColor>
+      <relevantDate xml-element="relevantDate">{{pkpass.isoDate}}</relevantDate>
+      <labelColor xml-element="labelColor"></labelColor>
+      <passCultures xml-element="passCultures">
+        <passCulture xml-element="passCulture">
+          <culture xml-element="culture"></culture>
+          <description xml-element="description">{{pkpass.description}}</description>
+          <organizationName xml-element="organizationName">{{pkpass.description}}</organizationName>
+          <logoText xml-element="logoText">{{pkpass.logoText}}</logoText>
+          <iconImageGuid xml-element="iconImageGuid">{{pkpass.image.logo}}</iconImageGuid>
+          <backgroundImageGuid xml-element="backgroundImageGuid" ng-if="pkpass.image.background">{{pkpass.image.background}}</backgroundImageGuid>
+          <logoImageGuid xml-element="logoImageGuid">{{pkpass.image.logo}}</logoImageGuid>
+        </passCulture>
+      </passCultures>
+      <locations xml-element="locations">
+        <location xml-element="location">
+          <key xml-element="key">Location1</key>
+          <longitude xml-element="longitude">{{pkpass.longitude}}</longitude>
+          <latitude xml-element="latitude">{{pkpass.latitude}}</latitude>
+          <locationCultures xml-element="locationCultures">
+            <locationCulture xml-element="locationCulture">
+              <culture xml-element="culture"></culture>
+              <relevantText xml-element="relevantText" ng-non-bindable>Welcome, {{Registrant.firstName}}</relevantText>
+            </locationCulture>
+          </locationCultures>
+        </location>
+      </locations>
+      <headerFields xml-element="headerFields"></headerFields>
+      <primaryFields xml-element="primaryFields">
+        <field xml-element="field">
+          <key xml-element="key">event</key>
+          <valueType xml-element="valueType">String</valueType>
+          <fieldCultures xml-element="fieldCultures">
+            <fieldCulture xml-element="fieldCulture">
+              <culture xml-element="culture"></culture>
+              <label xml-element="label">{{pkpass.primaryLabel}}</label>
+              <value xml-element="value">{{pkpass.primaryValue}}</value>
+            </fieldCulture>
+          </fieldCultures>
+        </field>
+      </primaryFields>
+      <secondaryFields xml-element="secondaryFields">
+        <field xml-element="field">
+          <key xml-element="key">location</key>
+          <valueType xml-element="valueType">String</valueType>
+          <fieldCultures xml-element="fieldCultures">
+            <fieldCulture xml-element="fieldCulture">
+              <culture xml-element="culture"></culture>
+              <label xml-element="label">{{pkpass.secondaryLabel}}</label>
+              <value xml-element="value">{{pkpass.secondaryValue}}</value>
+            </fieldCulture>
+          </fieldCultures>
+        </field>
+      </secondaryFields>
+      <auxilliaryFields xml-element="auxilliaryFields"></auxilliaryFields>
+      <backFields xml-element="backFields">
+        <field xml-element="field" ng-if="pkpass.backfield1">
+          <key xml-element="key">Arrival</key>
+          <valueType xml-element="valueType">String</valueType>
+          <fieldCultures xml-element="fieldCultures">
+            <fieldCulture xml-element="fieldCulture">
+              <culture xml-element="culture"></culture>
+              <label xml-element="label"></label>
+              <value xml-element="value">{{pkpass.backfield1}}</value>
+            </fieldCulture>
+          </fieldCultures>
+        </field>
+        <field xml-element="field" ng-if="pkpass.backfield2">
+          <key xml-element="key">EventHub</key>
+          <valueType xml-element="valueType">String</valueType>
+          <fieldCultures xml-element="fieldCultures">
+            <fieldCulture xml-element="fieldCulture">
+              <culture xml-element="culture"></culture>
+              <label xml-element="label"></label>
+              <value xml-element="value">{{pkpass.backfield2}}</value>
+            </fieldCulture>
+          </fieldCultures>
+        </field>
+        <field xml-element="field" ng-if="pkpass.backfield3">
+          <key xml-element="key">FollowUs</key>
+          <valueType xml-element="valueType">String</valueType>
+          <fieldCultures xml-element="fieldCultures">
+            <fieldCulture xml-element="fieldCulture">
+              <culture xml-element="culture"></culture>
+              <label xml-element="label"></label>
+              <value xml-element="value">{{pkpass.backfield3}}</value>
+            </fieldCulture>
+          </fieldCultures>
+        </field>
+      </backFields>
+    </pass>
+  </xml>
+</div>

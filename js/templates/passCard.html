@@ -1,0 +1,32 @@
+	<div class="demo-card-wide mdl-card mdl-shadow--2dp passCard">
+	  
+	  <div class="mdl-card__title">
+	    <h2 class="mdl-card__title-text">Create a Pk Pass
+	    	<input type="file" id="inputPkButton" onchange="angular.element(this).scope().importPkPass(this)">
+			<label for="inputPkButton" class="mdl-button mdl-button--input inputPkLabel"><i class="material-icons">input</i></label>
+		</h2>
+	  </div>
+
+	  <div class="row">
+	  	<passbook-settings></passbook-settings>
+	  	<passbook-preview></passbook-preview>
+	  </div>
+
+		<pre id="outputXML">{{xml.output}}</pre>		
+		
+	  <div class="mdl-card__actions mdl-card--border">	  		
+	  	
+	    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click="requestLocation(pkpass.address)">
+	      Find Coordinates
+	    </a>
+	    <span class="alert mdl-tooltip" ng-class="{'is-active' : alert.locationSuccess }">Found your location!</span>
+	    <span class="alert mdl-tooltip" ng-class="{'is-active' : alert.locationFail }">Zero Results :-/</span>
+	    <span class="alert mdl-tooltip pull-right" ng-class="{'is-active' : alert.copySuccess }">Copied Definition!</span>
+	    <span class="alert mdl-tooltip pull-right" ng-class="{'is-active' : alert.copyFail }">Failed to Copy :-(</span>
+	    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right" ng-click="getPkPass()" ngclipboard data-clipboard-target="#outputXML" ngclipboard-success="alertUser('copySuccess', 'copyFail');" ngclipboard-error="alertUser('copyFail', 'copySuccess');">
+	      Get Pk Pass
+	    </a>
+
+	  </div>
+
+	</div>

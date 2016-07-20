@@ -1,0 +1,97 @@
+<div class="col-sm-6">
+	<div class="row date-box">
+		<div class="col-sm-8">
+			<label for="startDate">Event Start Date:</label>
+			<input id="startDate" date-time format="YYYY-MM-DD HH:mm" ng-model="pkpass.date" date-change="calculateDate">
+		</div>
+		
+		<div class="mdl-selectfield col-sm-4">
+		    <label>Time Zone</label>
+		    <select class="browser-default questionType" ng-model="pkpass.timezone" ng-change="calculateDate()">
+		      <option value="" disabled selected>Event UTC Offset</option>
+		      <option value="-12:00">(UTC-12:00)</option>
+		      <option value="-11:00">(UTC-11:00)</option>
+		      <option value="-10:00">(UTC-10:00)</option>
+		      <option value="-09:00">(UTC-9:00)</option>
+		      <option value="-08:00">(UTC-8:00)</option>
+		      <option value="-07:00">(UTC-7:00)</option>
+		      <option value="-06:00">(UTC-6:00)</option>
+		      <option value="-05:00">(UTC-5:00)</option>
+		      <option value="-04:00">(UTC-4:00)</option>
+		      <option value="-03:00">(UTC-3:00)</option>
+		      <option value="-02:00">(UTC-2:00)</option>
+		      <option value="-01:00">(UTC-1:00)</option>
+		      <option value="+00:00">(UTC+0:00)</option>
+		      <option value="+01:00">(UTC+1:00)</option>
+		      <option value="+02:00">(UTC+2:00)</option>
+		      <option value="+03:00">(UTC+3:00)</option>
+		      <option value="+04:00">(UTC+4:00)</option>
+		      <option value="+05:00">(UTC+5:00)</option>
+		      <option value="+06:00">(UTC+6:00)</option>
+		      <option value="+07:00">(UTC+7:00)</option>
+		      <option value="+08:00">(UTC+8:00)</option>
+		      <option value="+09:00">(UTC+9:00)</option>
+		      <option value="+10:00">(UTC+10:00)</option>
+		      <option value="+11:00">(UTC+11:00)</option>
+		      <option value="+12:00">(UTC+12:00)</option>
+		      <option value="+13:00">(UTC+13:00)</option>
+			  <option value="+14:00">(UTC+14:00)</option>
+		    </select> 
+		</div>
+	</div>	
+	<div class="color-box row">
+		<div class="col-lg-3">Background Color:</div>
+		<color-picker ng-model="pkpass.backgroundColor" color-picker-format="'hex'" color-picker-case="'upper'" class="col-lg-3"></color-picker>
+		<div class="col-lg-3">Foreground Color:</div>
+		<color-picker ng-model="pkpass.foregroundColor" color-picker-format="'hex'" color-picker-case="'upper'" class="col-lg-3"></color-picker>		
+	</div>	
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.address">
+	    <label class="mdl-textfield__label">Event Address</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.image.background">
+	    <label class="mdl-textfield__label" >Background Image Guid</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.image.logo">
+	    <label class="mdl-textfield__label" >Logo Image Guid</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.logoText" maxlength="25">
+	    <label class="mdl-textfield__label">Logo Text</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.description" maxlength="23">
+	    <label class="mdl-textfield__label">Description</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.primaryLabel" maxlength="49">
+	    <label class="mdl-textfield__label" >Primary Field Label</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.primaryValue" maxlength="108">
+	    <label class="mdl-textfield__label" >Primary Field Value</label>
+	</div>
+
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.secondaryLabel" maxlength="49">
+	    <label class="mdl-textfield__label" >Secondary Field Label</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.secondaryValue" maxlength="82">
+	    <label class="mdl-textfield__label" >Secondary Field Value</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.backfield1">
+	    <label class="mdl-textfield__label" >Backfield 1</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.backfield2">
+	    <label class="mdl-textfield__label" >Backfield 2</label>
+	</div>
+	<div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" ng-model="pkpass.backfield3">
+	    <label class="mdl-textfield__label" >Backfield 3</label>
+	</div>
+</div>

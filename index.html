@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pk Pass Generator</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.teal-red.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/angularjs-color-picker.min.css">
+  <link rel="stylesheet" href="css/angular-datepicker.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header pass__nav container">
+    <div class="mdl-layout__header-row ">
+      <!-- Title -->
+      <img src="img/logo.png" alt="">
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+		<h4>Pk Pass Preview Tool</h4>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Pk Pass</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Login</a>
+      <a class="mdl-navigation__link" href="">Eval Generator</a>
+      <a class="mdl-navigation__link" href="">HTML Generator</a>
+      <a class="mdl-navigation__link" href="">Data Merger</a>   
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content" ng-app="pkPassApp" ng-cloak>
+    <div class="page-content">
+    	<div class="container" ng-controller="PkPassCtrl">
+
+			<passbook-card></passbook-card>
+			
+	
+		</div><!--End of Container-->
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+<!--  Scripts  -->
+<script type="text/javascript" src="js/angular.min.js" defer></script>
+<script type="text/javascript" src="js/location.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=initMap"
+  type="text/javascript"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js" defer></script>
+<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="libs/tinycolor-min.js" defer></script>
+<script type="text/javascript" src="libs/angularjs-color-picker.min.js" defer></script>
+<script type="text/javascript" src="libs/tinycolor-min.js" defer></script>
+<script type="text/javascript" src="libs/moment.min.js" defer></script>
+<script type="text/javascript" src="libs/angular-moment.min.js" defer></script>
+<script type="text/javascript" src="libs/angular-datepicker.min.js" defer></script>
+<script type="text/javascript" src="libs/ngclipboard.min.js" defer></script>
+<script type="text/javascript" src="libs/xmltemplater.js" defer></script>
+<script type="text/javascript" src="libs/vkbeautify.js" defer></script>
+<script type="text/javascript" src="js/app.js" defer></script>
+<script type="text/javascript" src="js/controller.js" defer></script>
+</body>
+</html>
